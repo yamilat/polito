@@ -1,0 +1,35 @@
+#### This file contains tests to evaluate that your bot behaves as expected.
+#### If you want to learn more, please see the docs: https://rasa.com/docs/rasa/testing-your-assistant
+
+stories:
+- story: happy path 1
+  steps:
+  - user: |
+      hola!
+    intent: saludo
+  - action: utter_saludo
+  - user: |
+      quería preguntarte por el taller de mblock
+    intent: consultas_talleres
+  - action: utter_info
+
+- story: happy path 2
+  steps:
+  - user: |
+      hola, cómo estás?
+    intent: saludo
+  - action: utter_saludo
+  - user: |
+      qué talleres tienen para niños?
+    intent: consulta_talleres
+  - action: utter_info
+  - user: |
+      listo, gracias!
+    intent: agradecimiento
+  - action: utter_denada
+  - user: |
+      no, eso es todo
+  - intent: negacion
+  - action: utter_despedida
+
+

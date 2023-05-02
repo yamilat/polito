@@ -1,0 +1,90 @@
+version: '3.1'
+intents:
+- afirmación
+- agradecimiento
+- bot_challenge
+- consulta_talleres
+- despedida
+- inscripcion
+- negación
+- saludo
+- robotica
+- mblock
+- impresion
+- adultos
+- espacio
+- reservacion_coworking
+- reservacion_auditorio
+responses:
+  utter_saludo:
+  - text: Hola! Soy Polito, el bot del Polo. Con qué puedo ayudarte?
+    buttons:
+    - title: consultar por talleres
+      payload: /consulta_talleres
+    - title: inscripción a taller
+      payload: /inscripcion
+    - title: coworking, auditorio
+      payload: /espacio
+  utter_info:
+  - text: Claro! De qué taller querés más información?
+    buttons:
+    - title: Taller de robotica
+      payload: /robotica
+    - title: Taller de diseño e impresión 3D
+      payload: /impresion
+    - title: Taller de programación en Arduino con mBlock
+      payload: /mblock
+    - title: Talleres para adultos
+      payload: /adultos
+  utter_robotica:
+
+  - text: El taller de robótica inicial está destinado a niños y niñas de 11 a 13 años. El fin de este taller es introducir a los niños al mundo de la robótica y la programación. Durante las 6 clases del taller, los niños podrán realizar el armado de un robot y la conexión de todas sus partes electrónicas, más la programación necesaria para que siga una línea y juegue a las peleas de sumo. Es totalmente gratuito y cuenta con un cupo para 10 alumnos. Te interesa anotarte?
+    buttons:
+    - title: Sí!
+      payload: /inscripcion
+    - title: No, gracias
+      payload: /agradecimiento    
+  utter_impresion:
+  - text: Durante el taller de impresión 3D se abordarán una serie de conceptos básicos y herramientas de modelado 3D para que cada niño/a pueda desarrollar sus propios modelos e imprimirlos en 3D. Será un espacio en común donde poder compartir, desarrollar, aprender e intercambiar el desarrollo de cada participante. El cupo es de 10 alumnos, a partir de 8 años en adelante. Te gustaría anotarte?
+
+    buttons:
+    - title: Sí!
+      payload: /inscripcion
+    - title: No, gracias
+      payload: /agradecimiento
+  utter_mblock:
+  - text: El curso de programación en mBlock y arduino propone ser un espacio formativo para aquellos niños que comienzan sus primeros pasos en el mundo de la programación, conocer los programas para tal fin y poder diseñar con kits de componentes electrónicos proyectos en cada clase desarrollando así su capacidad de innovar. Tiene una duración de 6 clases, de 2 hs cada una. Te gustaría anotarte?
+
+    buttons:
+    - title: Sí!
+      payload: /inscripcion
+    - title: No, gracias
+      payload: /agradecimiento
+  utter_adultos:
+  - text: Por el momento no tenemos talleres para adultos! Seguramente a partir de Marzo vamos a estar ofreciendo algunos de manera articulada con los que se dictaban en Escuela Municipal
+  - text: El curso de manejo de celular para adultos mayores no se está realizando actualmente, pero podés anotarte y quedás en la lista de espera si se llegara a realizar una nueva edición!
+  utter_varios:
+  - text: Para niños tenemos el taller de impresión 3D, el de robótica inicial y el de programación en Arduino con mBlock. Si bien ahora no están siendo dictados, podés anotarte en la lista de espera para la próxima edición!
+  utter_inscripcion:
+  - text: Te enviamos el formulario de inscripción para que puedas completar los datos https://docs.google.com/forms/d/e/1FAIpQLScq1bcfgPPEiCt7cGyO6-_01-gn0nQE6PIPbEDHo6ndAxaaqg/viewform
+  - text: Completá el siguiente formulario especificando el taller de tu interés. En caso de que te interese más de un taller, deberás completar un formulario para cada uno. En breve te estaremos confirmando la reserva de tu cupo! https://docs.google.com/forms/d/e/1FAIpQLScq1bcfgPPEiCt7cGyO6-_01-gn0nQE6PIPbEDHo6ndAxaaqg/viewform
+  utter_espacio:
+  - text: Actualmente contamos con una sala de coworking con una capacidad para 15 a 20 personas sentadas, que se puede utilizar para reuniones o simplemente para venir a trabajar! El auditorio cuenta con una capacidad de 80 personas sentadas cómodas. Te gustaría reservar alguno de los dos?
+    buttons:
+    - title: Coworking
+      payload: /reservacion_coworking
+    - title: Auditorio
+      payload: /reservacion_auditorio
+    - title: No, gracias
+      payload: negación
+  utter_soyunbot:
+  - text: soy un bot, creado con Rasa.
+  utter_denada:
+  - text: No hay problema! Puedo ayudarte con algo más?
+  - text: Gracias a vos! Hay algo más con lo que pueda ayudarte?
+  - text: De nada! Algo más que necesites saber?
+session_config:
+  session_expiration_time: 30
+  carry_over_slots_to_new_session: false
+actions:
+- action_greet

@@ -1,0 +1,46 @@
+version: "3.1"
+
+stories:
+
+#- story: happy path
+#  steps:
+#  - intent: saludo
+#  - action: action_greet
+#  - intent: consulta_talleres
+#  - action: utter_info
+
+
+#- story: unhappy path 
+#  steps:
+#  - intent: saludo
+#  - action: utter_saludo
+#  - intent: despedida
+#  - action: utter_despedida
+
+- story: interactive_story_1
+  steps:
+  - intent: saludo
+  - action: utter_saludo
+  - intent: afirmación
+  - intent: afirmación
+
+- story: interactive_story_2
+  steps:
+  - intent: saludo
+  - action: utter_saludo
+  - intent: afirmación
+  - action: utter_info
+  - intent: afirmación
+  - action: utter_impresion
+  - intent: inscripcion
+  - action: utter_inscripcion
+  - intent: agradecimiento
+  - action: utter_denada
+
+- story: pregunta_espacio
+  steps:
+  - intent: saludo
+  - action: utter_saludo
+  - intent: espacio
+  - action: utter_espacio
+

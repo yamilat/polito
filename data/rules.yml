@@ -1,0 +1,46 @@
+version: "3.1"
+
+rules:
+
+#- rule: saludar al usuario
+#  conversation_start: true
+#  steps:
+#  - intent: saludo
+#  - action: utter_saludo
+
+- rule: iniciar conversación
+  steps:
+  - action: action_session_start
+  - intent: saludo
+  - action: utter_saludo
+
+- rule: responder consultas de talleres
+  steps:
+  - intent: consulta_talleres
+  - action: utter_info
+  
+
+- rule: pasar el formulario de inscripción cuando el usuario lo pide
+  steps:
+  - intent: inscripcion
+  - action: utter_inscripcion
+
+- rule: responder con la informacion del taller
+  steps:
+
+  - intent: robotica
+  - action: utter_robotica
+  
+- rule: responder impresión 3d
+  steps:
+
+  - intent: impresion
+  - action: utter_impresion
+  
+- rule: responder mblock
+  steps:
+
+  - intent: mblock
+  - action: utter_mblock 
+  
+

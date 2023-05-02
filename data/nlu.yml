@@ -1,0 +1,81 @@
+version: "3.1"
+nlu:
+- intent: saludo
+  examples: |
+    - hola!
+    - buen día
+    - hola, cómo estás?
+    - hola qué tal
+    - cómo va?
+    - buenas tardes
+    - hola
+- intent: despedida
+  examples: |
+    - chau
+    - adiós
+    - saludos
+    - hasta luego
+    - nos vemos!
+    - gracias, hasta luego
+- intent: agradecimiento
+  examples: |
+    - gracias!
+    - ok, muchas gracias
+    - listo, gracias
+    - Gracias.
+    - te agradezco
+    - bárbaro, gracias
+- intent: afirmación
+  examples: |
+    - sí
+    - sisi
+    - ok
+    - dale
+    - buenísimo
+    - correcto
+- intent: negación
+  examples: |
+    - no
+    - nono
+    - nunca
+    - no creo
+    - me parece que no
+- intent: robotica
+  examples: |
+    - Me gustaría saber más sobre el taller de robótica para niños
+    - Hola!! Te consulto, hay talleres de verano de robotica para niños??
+    - quiero saber más sobre el taller de robótica
+    - Una consulta hace unos días vi que había cursos de robótica para niños/ adolescentes! Me podrían pasar más info
+- intent: impresion
+  examples: |
+    - quería consultar por el taller de impresion 3d
+    - me podrías pasar información sobre el taller de impresión 3D?
+    - consulto respecto al curso de verano de diseño e impresión 3D para niños. Quisiera anotar a mis hijos.
+    - me interesa el taller de impresion 3d, podrías pasarme más información?
+    - Quería consultar por el curso de impresión en 3d para niños.
+    - Me podrían pasar información sobre el taller de impresión 3D? 
+    - me pasarías información sobre el taller de impresión 3D?  
+- intent: adultos
+  examples: |
+    - Qué talleres hay para adultos?
+    - quería consultarte por un curso de uso del teléfono para adultos mayores
+    - Sigue disponible el taller de celular para adultos?
+- intent: mblock
+  examples: |
+    - me podés pasar más información sobre el taller de programación en mblock?
+    - Me dirías de qué se trata el curso de mblock y arduino?
+    - quiero saber más sobre el taller de mblock
+    - Te quería consultar por el curso de programación en mBlock y Arduino
+- intent: inscripcion
+  examples: |
+    - Quiero inscribirme al curso de computación
+    - como me anoto al taller de robotica?
+    - Cómo hago para anotarme?
+    - me podrías pasar el formulario de inscripción?
+    - Quisiera anotar a mi hijo en robotica inicial
+    - quiero anotar a mi hijo al taller de mblock
+    - Puedo inscribir a mi hija al taller de robótica que empieza en pocos días?
+    - cómo lo anoto?
+    - quiero anotarme al taller de programación
+    - hola buenos dias quisiera saber que hay que hacer para anotar a mi nene al taller de impresion en 3D
+    - cómo me inscribo?
